@@ -10,6 +10,9 @@
 npm install --save datepicker-jalali-react
 ```
 
+## Demo
+[https://matinrezakhani.github.io/datepicker-jalali-react/](https://matinrezakhani.github.io/datepicker-jalali-react/)
+
 ## Usage
 
 ```jsx
@@ -26,12 +29,32 @@ const App = () => {
   }
 
   return (
-    <Datepicker
-      value={date}
-      onChange={(e) => {
-        handleDatepicker(e)
-      }}
-    />
+    <div>
+
+      <Datepicker
+        value={date}
+        onChange={(e) => {
+          handleDatepicker(e)
+        }}
+      /> 
+
+      <Datepicker
+        value={date}
+        disableTime
+        onChange={(e) => {
+          handleDatepicker(e)
+        }}
+      />
+      
+      <Datepicker
+        value={date}
+        disableDate
+        onChange={(e) => {
+          handleDatepicker(e)
+        }}
+      />
+
+    </div>
   )
 }
 ```
