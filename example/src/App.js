@@ -1,10 +1,9 @@
 import React from 'react'
 
-import { ExampleComponent } from 'datepicker-jalali-react'
-import 'datepicker-jalali-react/dist/index.css'
+import  Datepicker from 'datepicker-jalali-react'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <Datepicker />
 }
 
 export default App
