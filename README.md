@@ -13,15 +13,26 @@ npm install --save datepicker-jalali-react
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 
-import MyComponent from 'datepicker-jalali-react'
-import 'datepicker-jalali-react/dist/index.css'
+import Datepicker from 'datepicker-jalali-react'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
+const App = () => {
+  const [date, setDate] = useState('')
+
+  const handleDatepicker = (e) => {
+    console.log(e)
+    setDate(e)
   }
+
+  return (
+    <Datepicker
+      value={date}
+      onChange={(e) => {
+        handleDatepicker(e)
+      }}
+    />
+  )
 }
 ```
 
