@@ -1,0 +1,14 @@
+.card {
+  margin-top: 50px;
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.24);
+  border-radius: 8px;
+  padding: 30px 0;
+  margin-top: 40px;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 15px;
+}

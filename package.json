@@ -54,6 +54,7 @@
     "antd": "^4.15.4",
     "antd-jalali": "^0.9.4",
     "dayjs": "^1.10.4",
-    "jalali-moment": "^3.3.10"
+    "jalali-moment": "^3.3.10",
+    "lodash": "^4.17.21"
   }
 }

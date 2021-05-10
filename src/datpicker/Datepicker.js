@@ -3,9 +3,10 @@ import { DatePicker } from 'antd-jalali'
 import { TimePicker, Row, Col } from 'antd'
 import Moment from 'jalali-moment'
 import dayjs from 'dayjs'
-import {ConfigProvider} from 'antd';
-import faIr from 'antd/lib/locale-provider/fa_IR';
-import "antd/dist/antd.css";
+import { ConfigProvider } from 'antd'
+import faIr from 'antd/lib/locale-provider/fa_IR'
+import 'antd/dist/antd.css';
+import _ from 'lodash'
 
 dayjs.calendar('jalali')
 
@@ -28,6 +29,7 @@ function DatePickerComponent(props) {
     }
     setDate(d)
   }, [props.value])
+
 
   const changeTime = (time) => {
     let d = Moment(date['$d']).format('YYYY-MM-DD')
@@ -63,34 +65,34 @@ function DatePickerComponent(props) {
   return (
     <div className={'DatePicker'}>
       <ConfigProvider locale={faIr}>
-      <Row justify={'center'}>
-        <Col xs={{ span: 9 }}>
-          <TimePicker
-            style={{ borderRadius: 0, width: '100%' }}
-            value={date}
-            onChange={(e) => {
-              if (e) {
-                changeTime(e['$d'])
-              } else {
-                changeTime(Date.now())
-              }
-            }}
-          />
-        </Col>
-        <Col xs={{ span: 15 }}>
-          <DatePicker
-            style={{ borderRadius: 0, width: '100%' }}
-            onChange={(e) => {
-              if (e) {
-                changeDate(e['$d'])
-              } else {
-                changeDate(Date.now())
-              }
-            }}
-            value={date}
-          />
-        </Col>
-      </Row>
+        <Row justify={'center'}>
+          {!props.disableDate&&<Col xs={{ span: 15 }}>
+            <DatePicker
+              style={{ width: '100%'}}
+              onChange={(e) => {
+                if (e) {
+                  changeDate(e['$d'])
+                } else {
+                  changeDate(Date.now())
+                }
+              }}
+              value={date}
+            />
+          </Col>}
+          {!props.disableTime&&<Col xs={{ span: 9 }}>
+            <TimePicker
+              style={{ width: '100%'}}
+              value={date}
+              onChange={(e) => {
+                if (e) {
+                  changeTime(e['$d'])
+                } else {
+                  changeTime(Date.now())
+                }
+              }}
+            />
+          </Col>}
+        </Row>
       </ConfigProvider>
     </div>
   )
