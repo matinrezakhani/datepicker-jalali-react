@@ -13,11 +13,20 @@ npm install --save datepicker-jalali-react
 ## Demo
 [https://matinrezakhani.github.io/datepicker-jalali-react/](https://matinrezakhani.github.io/datepicker-jalali-react/)
 
-## Usage
 
+
+## Date Picker Jalali
+| props               | type                                | default                                                                                                             |
+| ------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| value               | timestamp &#124; Date &#124; Moment | Date | Moment | today date                                                                                          |
+| disableDate         | boolean                             | default is false                                                                                                    |
+| disableTime         | boolean                             | default is false                                                                                                    |
+| onChange            | function                            | this function will be called when the date or time changed                                                          |
+
+
+## Usage
 ```jsx
 import React, { useState } from 'react'
-
 import Datepicker from 'datepicker-jalali-react'
 
 const App = () => {
