@@ -19,6 +19,7 @@ npm install --save datepicker-jalali-react
 | props               | type                                | default                                                                                                             |
 | ------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | value               | timestamp &#124; Date &#124; Moment | Date | Moment | today date                                                                                          |
+| locale              | string ('fa','en')                  | fa                                                                                                                  |
 | disableDate         | boolean                             | default is false                                                                                                    |
 | disableTime         | boolean                             | default is false                                                                                                    |
 | onChange            | function                            | this function will be called when the date or time changed                                                          |
