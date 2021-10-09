@@ -8,6 +8,7 @@ const { Text } = Typography
 
 const App = () => {
   const [date, setDate] = useState(Date.now())
+  const [locale, setLocale] = useState('fa')
 
   const handleDatepicker = (e) => {
     setDate(e)
@@ -30,6 +31,7 @@ const App = () => {
             <Col xs={{ span: 15 }}>
               <Datepicker
                 value={date}
+                locale={locale}
                 onChange={(e) => {
                   handleDatepicker(e)
                 }}
@@ -54,6 +56,7 @@ const App = () => {
               <Datepicker
                 value={date}
                 disableTime
+                locale={locale}
                 onChange={(e) => {
                   handleDatepicker(e)
                 }}
@@ -78,6 +81,7 @@ const App = () => {
               <Datepicker
                 value={date}
                 disableDate
+                locale={locale}
                 onChange={(e) => {
                   handleDatepicker(e)
                 }}
